@@ -1,1 +1,3 @@
 # trivia
+
+[SmartLinkify](SmartLinkify.md)

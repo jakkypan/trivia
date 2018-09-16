@@ -5,4 +5,4 @@
 * [Android P之Smart Linkify](SmartLinkify.md)
 
 * [APP的“死”与“活”](APP存活.md)
-  * 对应的demo：
+  * 对应的demo：[https://github.com/jakkypan/XKeepAlive](https://github.com/jakkypan/XKeepAlive)

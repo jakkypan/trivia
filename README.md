@@ -8,3 +8,5 @@
   * 对应的demo：[https://github.com/jakkypan/XKeepAlive](https://github.com/jakkypan/XKeepAlive)
   
 * [安卓进程启动流程](安卓进程启动流程.md)
+
+* [Framework WatchDog原理分析](WatchDog原理分析.md)

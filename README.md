@@ -15,4 +15,4 @@
 
 * [PackageManagerService分析(一）—— PMS的启动流程](PMS启动流程.md)
 
-* [Queues](Queues.kt.md)
+* [Queues](Queues.kt)

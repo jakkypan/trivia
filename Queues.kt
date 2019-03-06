@@ -1,4 +1,3 @@
-```java
 package com.panda.queue
 
 import android.annotation.TargetApi
@@ -108,4 +107,3 @@ final class Queues {
     }
 
 }
-```

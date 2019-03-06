@@ -14,3 +14,5 @@
 * [Android P对API限制的原理与绕过](安卓P对API限制的原理与绕过.md)
 
 * [PackageManagerService分析(一）—— PMS的启动流程](PMS启动流程.md)
+
+* [Queues](Queues.kt.md)

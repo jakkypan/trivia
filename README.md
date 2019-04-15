@@ -16,3 +16,5 @@
 * [PackageManagerService分析(一）—— PMS的启动流程](PMS启动流程.md)
 
 * [Queues](Queues.kt)
+
+* [AndFix源码阅读随笔](AndFix源码阅读随笔.md)

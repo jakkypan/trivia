@@ -19,4 +19,4 @@
 
 * [AndFix源码阅读随笔](AndFix源码阅读随笔.md)
 
-* [Instant run分析](Instant run分析.md)
+* [Instant run分析](InstantRun分析.md)

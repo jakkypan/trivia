@@ -32,3 +32,5 @@
 * [深入了解几何着色器](深入了解几何着色器.md)
 
 * [混合模式](混合模式.md)
+
+* [VBO、VAO、EBO（IBO）、FBO和PBO介绍](VBO、VAO、EBO（IBO）、FBO和PBO介绍.md)

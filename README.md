@@ -34,3 +34,5 @@
 * [混合模式](混合模式.md)
 
 * [VBO、VAO、EBO（IBO）、FBO和PBO介绍](VBO、VAO、EBO（IBO）、FBO和PBO介绍.md)
+
+* [Java对外内存](Java对外内存.md)

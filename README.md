@@ -38,3 +38,5 @@
 * [Java对外内存](Java对外内存.md)
 
 * [Transform Feedback介绍.md](TransformFeedback介绍.md)
+
+* [C++ SIMD开发指南](C++SIMD开发指南.md)

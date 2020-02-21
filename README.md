@@ -40,3 +40,5 @@
 * [Transform Feedback介绍.md](TransformFeedback介绍.md)
 
 * [C++ SIMD开发指南](C++SIMD开发指南.md)
+
+* [C++实例化说明](C++实例化说明.md)

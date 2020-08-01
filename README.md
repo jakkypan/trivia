@@ -44,3 +44,5 @@
 * [C++实例化说明](C++实例化说明.md)
 
 * [AR介绍](AR介绍.pdf)
+
+* [MediaCodec原理和基本操作](MediaCodec原理和基本操作.md)

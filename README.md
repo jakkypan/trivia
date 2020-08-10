@@ -46,3 +46,5 @@
 * [AR介绍](AR介绍.pdf)
 
 * [MediaCodec原理和基本操作](MediaCodec.md)
+
+* [MediaMuxer和MediaExtractor原理和基本操作](MediaMuxer原理和基本操作.md)

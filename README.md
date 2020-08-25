@@ -48,3 +48,7 @@
 * [MediaCodec原理和基本操作](MediaCodec.md)
 
 * [MediaMuxer和MediaExtractor原理和基本操作](MediaMuxer原理和基本操作.md)
+
+
+* 网络好文：
+ * [Android Bitmap像素排列与JNI操作](https://juejin.im/post/6864165543042744327?utm_source=gold_browser_extension#heading-18)

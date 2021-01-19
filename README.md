@@ -51,6 +51,8 @@
 
 * [Android针对包装器类的内存优化](Android针对包装器类的内存优化.md)
 
+* [Android匿名共享内存](Android匿名共享内存.md)
+
 
 ### 网络好文：
  * [Android Bitmap像素排列与JNI操作](https://juejin.im/post/6864165543042744327?utm_source=gold_browser_extension#heading-18)

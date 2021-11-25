@@ -169,13 +169,13 @@ Android Native中支持的线程标准是 POSIX 线程。POSIX 线程也被简�
 
 POSIX Thread 的Android实现是Bionic标准库的一部分，在编译的时候不需要链接任何其他的库，只需要包含一个头文件：
 
-```
+```c
 #include <pthread.h>
 ```
 
 创建方法：
 
-```
+```c
 int pthread_create(pthread_t* __pthread_ptr, pthread_attr_t const* __attr, void* (*__start_routine)(void*), void* arg)
 ```
 
@@ -186,7 +186,7 @@ int pthread_create(pthread_t* __pthread_ptr, pthread_attr_t const* __attr, void*
 
 例子：
 
-```
+```c
 void sayHello(void *){
     LOGE("say %s","hello");
 }
@@ -222,7 +222,7 @@ int pthread_join(pthread_t pthread, void** ret_value);
 
 例子：
 
-```
+```c
 static JavaVM *jVm = NULL;
 JNIEXPORT int JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
     jVm = vm;

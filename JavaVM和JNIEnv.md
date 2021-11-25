@@ -102,7 +102,7 @@ void AndroidRuntime::start(const char* className, const Vector<String8>& options
 
 其中startVm的核心：
 
-![](./imgs/jni_vm.png)
+![](.imgs/jni_vm.png)
 
 ## JNIEnv
 

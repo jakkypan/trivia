@@ -4,7 +4,7 @@
 
 ### MonitorEnter
 
-```
+```c
 jint MonitorEnter(JNIEnv *env, jobject obj);
 ```
 
@@ -12,7 +12,7 @@ jint MonitorEnter(JNIEnv *env, jobject obj);
 
 ### MonitorExit
 
-```
+```c
 jint MonitorExit(JNIEnv *env, jobject obj);
 ```
 
@@ -207,7 +207,7 @@ JNIEXPORT jint JNICALL Java_com_david_JNIController_sayhello
 
 新线程运行后，该方法也就立即返回退出，执行完了。我们也可以通过另一个函数可以在等待线程执行完毕后，拿到线程执行完的结果之后再退出。
 
-```
+```c
 int pthread_join(pthread_t pthread, void** ret_value);
 ```
 

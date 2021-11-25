@@ -161,6 +161,84 @@ Java_ndk_example_com_ndkexample_MainActivity_nativeModify(JNIEnv *env, jobject i
 01-30 10:56:01.114 14313-14341/ndk.example.com.ndkexample I/Native: modify=20
 ```
 
+## 关于Android的线程
 
+### 线程创建
 
+Android Native中支持的线程标准是 POSIX 线程。POSIX 线程也被简称为Pthreads，是一个线程的POSIX 标准，它为创建和处理线程定义了一个通用的API。
 
+POSIX Thread 的Android实现是Bionic标准库的一部分，在编译的时候不需要链接任何其他的库，只需要包含一个头文件：
+
+```
+#include <pthread.h>
+```
+
+创建方法：
+
+```
+int pthread_create(pthread_t* __pthread_ptr, pthread_attr_t const* __attr, void* (*__start_routine)(void*), void* arg)
+```
+
+* `__pthread_ptr`：指向 pthread_t 类型变量的指针，用它代表返回线程的句柄
+* `__attr`：指向`pthread_attr_t`结构的指针形式存在的新线程属性，可以通过该结构来指定新线程的一些属性，比如栈大小、调度优先级等，具体看`pthread_attr_t`结构的内容。如果没有特殊要求，可使用默认值，把该变量取值为 NULL
+* `第三个参数`：指向启动函数的函数指针
+* `arg`：线程启动程序的参数，也就是函数的参数，如果不需要传递参数，它可以为 NULL
+
+例子：
+
+```
+void sayHello(void *){
+    LOGE("say %s","hello");
+}
+
+JNIEXPORT jint JNICALL Java_com_david_JNIController_sayhello
+        (JNIEnv *jniEnv, jobject instance) {
+    pthread_t handles; // 线程句柄
+    int ret = pthread_create(&handles, NULL, sayHello, NULL);
+    if (ret != 0) {
+        LOGE("create thread failed");
+    } else {
+        LOGD("create thread success");
+    }
+}
+```
+
+### 等待线程结果
+
+新线程运行后，该方法也就立即返回退出，执行完了。我们也可以通过另一个函数可以在等待线程执行完毕后，拿到线程执行完的结果之后再退出。
+
+```
+int pthread_join(pthread_t pthread, void** ret_value);
+```
+
+* `pthread`：代表创建线程的句柄
+* `ret_value`：代表线程运行函数返回的结果
+
+### 与java虚拟机绑定
+
+创建了线程后，只能做一些简单的Native操作，如果想要对Java层做一些操作就不行了，因为它没有Java虚拟机环境，这个时候为了和Java空间进行交互，就要把POSIX 线程附着在Java虚拟机上，然后就可以获得当前线程的 JNIEnv 指针了。
+
+通过`AttachCurrentThread`方法可以将当前线程附着到 Java 虚拟机上，并且可以获得 JNIEnv 指针。而`AttachCurrentThread`方法是由 JavaVM 指针调用的，可以在`JNI_OnLoad`函数中将JavaVM保存为全局变量。
+
+例子：
+
+```
+static JavaVM *jVm = NULL;
+JNIEXPORT int JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
+    jVm = vm;
+    return JNI_VERSION_1_6;
+}
+
+void sayHello(void *){
+    LOGE("say %s","hello");
+     JNIEnv *env = NULL;
+    // 将当前线程添加到 Java 虚拟机上
+    if (jVm->AttachCurrentThread(&env, NULL) == 0) {
+        ......
+        env->CallVoidMethod(Obj, javaSayHello);  //javaSayHello为java层方法
+        // 从 Java 虚拟机上分离当前线程
+        jVm->DetachCurrentThread();  
+    }
+    return NULL;
+}
+```

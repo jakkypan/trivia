@@ -61,5 +61,7 @@
 
 * [JavaVM和JNIEnv](JavaVM和JNIEnv.md)
 
+* [binder的一些东西](binder的一些东西.md)
+
 ### 网络好文：
  * [Android Bitmap像素排列与JNI操作](https://juejin.im/post/6864165543042744327?utm_source=gold_browser_extension#heading-18)

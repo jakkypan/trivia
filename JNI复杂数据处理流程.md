@@ -2,8 +2,8 @@
 
 ## JNI接收复杂数据
 
-![](./imgs/jni_input.png)
+![](./imgs/jni_output.png)
 
 ## JNI返回复杂数据
 
-![](./imgs/jni_output.png)
+![](./imgs/jni_input.png)

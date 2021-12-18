@@ -67,5 +67,7 @@
 
 * [git回滚总汇](git回滚总汇.md)
 
+* [C++头文件的作用和使用规范](C++头文件的作用和使用规范.md)
+
 ### 网络好文：
  * [Android Bitmap像素排列与JNI操作](https://juejin.im/post/6864165543042744327?utm_source=gold_browser_extension#heading-18)

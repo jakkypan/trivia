@@ -71,3 +71,4 @@
 
 ### 网络好文：
  * [Android Bitmap像素排列与JNI操作](https://juejin.im/post/6864165543042744327?utm_source=gold_browser_extension#heading-18)
+ * [JNI 的多线程回调](https://zjuturtle.com/2020/01/25/jni-multithread-callback/)

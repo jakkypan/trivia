@@ -2,6 +2,9 @@
 
 万事起于忽微 量变引起质变。
 
+
+* [2022年文章](2022/README.md)
+
 * [Android P之Smart Linkify](SmartLinkify.md)
 
 * [APP的“死”与“活”](APP存活.md)
@@ -68,6 +71,10 @@
 * [git回滚总汇](git回滚总汇.md)
 
 * [C++头文件的作用和使用规范](C++头文件的作用和使用规范.md)
+
+* [Jni FindClass新线程crash问题分析](JniFindClass新线程crash问题分析.md)
+
+* [安卓动态库的加载](安卓动态库的加载.md)
 
 ### 网络好文：
  * [Android Bitmap像素排列与JNI操作](https://juejin.im/post/6864165543042744327?utm_source=gold_browser_extension#heading-18)
